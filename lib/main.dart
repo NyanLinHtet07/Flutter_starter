@@ -30,21 +30,18 @@ class MyApp extends StatelessWidget {
           shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.only(bottomLeft: Radius.circular(30))),
         ),
-        body: const Center(
-            child: Text(
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
-          maxLines: 2,
-          overflow: TextOverflow.fade,
-          textAlign: TextAlign.center,
-          style: TextStyle(
-              fontSize: 20,
-              color: Colors.red,
-              letterSpacing: 5,
-              wordSpacing: 6,
-              decoration: TextDecoration.underline,
-              fontWeight: FontWeight.bold,
-              fontFamily: 'ALbertSans'),
-        )),
+        body: Container(
+          color: Colors.red,
+          // width: 600,
+          // height: 200,
+          margin: const EdgeInsets.all(20),
+          child: Text(
+            'container',
+            style: TextStyle(fontSize: 20, color: Colors.white),
+          ),
+          alignment: Alignment.center,
+          constraints: const BoxConstraints(minWidth: 300, maxHeight: 400),
+        ),
         floatingActionButton: FloatingActionButton(
           child: const Icon(Icons.home),
           onPressed: () {
