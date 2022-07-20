@@ -28,19 +28,12 @@ class MyApp extends StatelessWidget {
         shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10))),
       ),
-      body: Column(children: [
-        Container(
-            alignment: Alignment.center,
-            width: 300,
-            height: 300,
-            child: Image.network(
-              "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1240w,f_auto,q_auto:best/rockcms/2022-06/220617-lightyear-mjf-1648-dd3fa6.jpg",
-              loadingBuilder: (_, widget, progress) {
-                if (progress == null) return widget;
-                return CircularProgressIndicator();
-              },
-            ))
-      ]),
+      body: ListView.builder(
+        itemCount: 100,
+        itemBuilder: (BuildContext context, int index) {
+          return const Text("loream");
+        },
+      ),
     );
   }
 }
